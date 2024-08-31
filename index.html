@@ -20,7 +20,7 @@
   </body>
   <script defer src="https://umami.analyze.ng/script.js" data-website-id="e5f92c84-0bef-4031-bcc2-aece7b8aaee1"></script>
 <!-- 页脚 -->
-<footer style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<footer style="display: flex; justify-content: center; align-items: center; padding: 20px; background-color: #f1f1f1;">
     <div>
         <div id="server-info" style="text-align: center;">
             现在为您提供服务的服务器是 <span id="cf-country"></span> <img id="cf-flag" src="" alt="国旗" style="width: 16px; height: 16px;"> 
@@ -35,7 +35,7 @@
 
 <script type="text/javascript">
     function fetchData() {
-        fetch('https://image.nom.mk')
+        fetch('https://image.nom.mk/ipinfo.php')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('cf-country').textContent = data.cf_node_country;
@@ -52,4 +52,5 @@
 
     fetchData();
 </script>
+
 </html>
